@@ -67,7 +67,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">大牛博客</a>
     			
             
     			
@@ -79,10 +79,6 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 		        
@@ -124,10 +120,6 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 			        
@@ -210,65 +202,6 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/05/hello-world/" class="archive-article-date">
-  	<time datetime="2017-02-05T12:56:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/05/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-关于浮动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -296,10 +229,10 @@
 <li>在布局的时候我们经常希望某些内容能够水平排布，水平排布后，由于内部内容不确定，高度不能简单的给一个定值。而如果不给高度，子元素又都浮动了，父盒子就会因为没有子盒子的支撑而塌陷。</li>
 <li>利用清除浮动的这个特性，我们可以给父元素中最后一个不浮动的盒子使用clear:both从而把父盒子的高度撑起来，并且能够根据内部内容的变化而改变高度。</li>
 </ul>
-<h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><h3 id="1-额外标签法"><a href="#1-额外标签法" class="headerlink" title="1. 额外标签法"></a>1. 额外标签法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">单独使用一个标签加上clear:both跑到浮动元素下面，从而消除子盒子浮动造成的父盒子塌陷</div><div class="line">	</div><div class="line">	* 缺点：添加很多无意义的空标签，不符合结构与表现分离的原则，不利于后期维护</div></pre></td></tr></table></figure>
-<h3 id="2-父元素设置-overflow-hidden"><a href="#2-父元素设置-overflow-hidden" class="headerlink" title="2. 父元素设置 overflow: hidden"></a>2. 父元素设置 overflow: hidden</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">给父元素设置属性overflow: hidden</div><div class="line"></div><div class="line">	* 缺点：内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素</div></pre></td></tr></table></figure>
-<h3 id="3-单伪元素"><a href="#3-单伪元素" class="headerlink" title="3. 单伪元素"></a>3. 单伪元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">    <span class="attr">content</span>: <span class="string">''</span>;</div><div class="line">    height: <span class="number">0</span>;</div><div class="line">    visibility: hidden;</div><div class="line">    overflow: hidden;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix &#123;</div><div class="line">    *zoom: <span class="number">1</span>;<span class="comment">/* IE67 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="4-双伪元素"><a href="#4-双伪元素" class="headerlink" title="4. 双伪元素"></a>4. 双伪元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.clearfix:before, .clearfix:after &#123;</div><div class="line">    <span class="attr">content</span>: <span class="string">""</span>;</div><div class="line">    display: table;<span class="comment">/*不是inline就行*/</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/*在有该类的元素内部元素的前面和后面添加元素*/</span></div><div class="line">.clearfix:after &#123;</div><div class="line">    <span class="attr">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*只要after两侧有浮动元素，after就会跑到最下面，从而撑开带有该类名的父盒子*/</span></div><div class="line">.clearfix &#123;</div><div class="line">    *zoom: <span class="number">1</span>; <span class="comment">/* IE67 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><h3 id="1-额外标签法"><a href="#1-额外标签法" class="headerlink" title="1. 额外标签法"></a>1. 额外标签法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">单独使用一个标签加上clear:both跑到浮动元素下面，从而消除子盒子浮动造成的父盒子塌陷</div><div class="line">	</div><div class="line">* 缺点：添加很多无意义的空标签，不符合结构与表现分离的原则，不利于后期维护</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2015/08/18/关于浮动/#more">more >></a>
+        
       
 
       
@@ -313,6 +246,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">清除浮动</a>
         		</li>
       		
 		</ul>
@@ -455,7 +392,7 @@
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">大牛博客</a></li>
       
         
       
@@ -481,6 +418,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html 清除浮动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html&清除浮动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">清除浮动</a>
               </li>
             
             <div class="clearfix"></div>
@@ -532,7 +481,7 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://www.ruanyifeng.com/blog/archives.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>阮一峰大神</a>
             </li>
           
             <li class="search-li">

@@ -24,7 +24,7 @@
 为什么要清除浮动
 在布局的时候我们经常希望某些内容能够水平排布，水平排布后，由于内部内容不确定，高度不能简单的给一个定值。而如果不给高度，子元素又都浮动了，父盒子就会因为没有子盒子的支撑而塌陷。
 利用清除浮动的这个特性，我们可以给父元素中">
-<meta property="og:updated_time" content="2017-02-18T09:09:36.000Z">
+<meta property="og:updated_time" content="2017-03-27T09:43:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于浮动">
 <meta name="twitter:description" content="清除浮动什么是清除浮动
@@ -86,7 +86,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">大牛博客</a>
     			
             
     			
@@ -98,10 +98,6 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 		        
@@ -143,10 +139,6 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 			        
@@ -203,9 +195,10 @@
 <li>在布局的时候我们经常希望某些内容能够水平排布，水平排布后，由于内部内容不确定，高度不能简单的给一个定值。而如果不给高度，子元素又都浮动了，父盒子就会因为没有子盒子的支撑而塌陷。</li>
 <li>利用清除浮动的这个特性，我们可以给父元素中最后一个不浮动的盒子使用clear:both从而把父盒子的高度撑起来，并且能够根据内部内容的变化而改变高度。</li>
 </ul>
-<h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><h3 id="1-额外标签法"><a href="#1-额外标签法" class="headerlink" title="1. 额外标签法"></a>1. 额外标签法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">单独使用一个标签加上clear:both跑到浮动元素下面，从而消除子盒子浮动造成的父盒子塌陷</div><div class="line">	</div><div class="line">	* 缺点：添加很多无意义的空标签，不符合结构与表现分离的原则，不利于后期维护</div></pre></td></tr></table></figure>
-<h3 id="2-父元素设置-overflow-hidden"><a href="#2-父元素设置-overflow-hidden" class="headerlink" title="2. 父元素设置 overflow: hidden"></a>2. 父元素设置 overflow: hidden</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">给父元素设置属性overflow: hidden</div><div class="line"></div><div class="line">	* 缺点：内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素</div></pre></td></tr></table></figure>
-<h3 id="3-单伪元素"><a href="#3-单伪元素" class="headerlink" title="3. 单伪元素"></a>3. 单伪元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">    <span class="attr">content</span>: <span class="string">''</span>;</div><div class="line">    height: <span class="number">0</span>;</div><div class="line">    visibility: hidden;</div><div class="line">    overflow: hidden;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix &#123;</div><div class="line">    *zoom: <span class="number">1</span>;<span class="comment">/* IE67 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><h3 id="1-额外标签法"><a href="#1-额外标签法" class="headerlink" title="1. 额外标签法"></a>1. 额外标签法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">单独使用一个标签加上clear:both跑到浮动元素下面，从而消除子盒子浮动造成的父盒子塌陷</div><div class="line">	</div><div class="line">* 缺点：添加很多无意义的空标签，不符合结构与表现分离的原则，不利于后期维护</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2-父元素设置-overflow-hidden"><a href="#2-父元素设置-overflow-hidden" class="headerlink" title="2. 父元素设置 overflow: hidden"></a>2. 父元素设置 overflow: hidden</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">给父元素设置属性overflow: hidden</div><div class="line"></div><div class="line">* 缺点：内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素</div></pre></td></tr></table></figure>
+<h3 id="3-单伪元素"><a href="#3-单伪元素" class="headerlink" title="3. 单伪元素"></a>3. 单伪元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">    <span class="attr">content</span>: <span class="string">''</span>;</div><div class="line">    height: <span class="number">0</span>;</div><div class="line">    visibility: hidden;</div><div class="line">    overflow: hidden;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix &#123;</div><div class="line">    *zoom: <span class="number">1</span>;<span class="comment">/* IE67 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="4-双伪元素"><a href="#4-双伪元素" class="headerlink" title="4. 双伪元素"></a>4. 双伪元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.clearfix:before, .clearfix:after &#123;</div><div class="line">    <span class="attr">content</span>: <span class="string">""</span>;</div><div class="line">    display: table;<span class="comment">/*不是inline就行*/</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/*在有该类的元素内部元素的前面和后面添加元素*/</span></div><div class="line">.clearfix:after &#123;</div><div class="line">    <span class="attr">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*只要after两侧有浮动元素，after就会跑到最下面，从而撑开带有该类名的父盒子*/</span></div><div class="line">.clearfix &#123;</div><div class="line">    *zoom: <span class="number">1</span>; <span class="comment">/* IE67 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
@@ -241,6 +234,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">清除浮动</a>
         		</li>
       		
 		</ul>
@@ -310,11 +307,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/02/05/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/12/imgTest/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          imgTest
         
       </div>
     </a>
@@ -400,7 +397,7 @@
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">大牛博客</a></li>
       
         
       
@@ -426,6 +423,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html 清除浮动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html&清除浮动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">清除浮动</a>
               </li>
             
             <div class="clearfix"></div>
@@ -477,7 +486,7 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://www.ruanyifeng.com/blog/archives.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>阮一峰大神</a>
             </li>
           
             <li class="search-li">
