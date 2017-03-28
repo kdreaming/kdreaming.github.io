@@ -6,42 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Css Hack调整兼容性 | KDreaming&#39;s BLOG</title>
+  <title>仿jquery核心代码 | KDreaming&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Css Hack调整兼容性方式一 条件注释法（较为常用）123&amp;lt;!--[if lte IE 8]&amp;gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;lteIE8.css&quot;/&amp;gt;&amp;lt;![endif]--&amp;gt;
-
-只在IE下生效
-
-1&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;
-
-只在IE6下生效
-
-1&amp;lt;!--[if IE 6]&amp;">
+  <meta name="description" content="写在前面1jQuery也用了一段时间了，对原生js的认识也更深入了一些，所以也试着阅读了一下jquery的部分源码，真的只有佩服啊，仿照jquery源码自己也试着封装了一个超轻量级的iquery(山寨货）还很不全面，不过对于对js的使用和理解感觉更具体了一些。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Css Hack调整兼容性">
-<meta property="og:url" content="http://yoursite.com/2015/09/02/Css Hack调整兼容性/index.html">
+<meta property="og:title" content="仿jquery核心代码">
+<meta property="og:url" content="http://yoursite.com/2016/02/05/仿jquery核心代码/index.html">
 <meta property="og:site_name" content="KDreaming's BLOG">
-<meta property="og:description" content="Css Hack调整兼容性方式一 条件注释法（较为常用）123&amp;lt;!--[if lte IE 8]&amp;gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;lteIE8.css&quot;/&amp;gt;&amp;lt;![endif]--&amp;gt;
-
-只在IE下生效
-
-1&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;
-
-只在IE6下生效
-
-1&amp;lt;!--[if IE 6]&amp;">
-<meta property="og:updated_time" content="2017-03-28T12:29:19.000Z">
+<meta property="og:description" content="写在前面1jQuery也用了一段时间了，对原生js的认识也更深入了一些，所以也试着阅读了一下jquery的部分源码，真的只有佩服啊，仿照jquery源码自己也试着封装了一个超轻量级的iquery(山寨货）还很不全面，不过对于对js的使用和理解感觉更具体了一些。">
+<meta property="og:updated_time" content="2017-03-28T15:01:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Css Hack调整兼容性">
-<meta name="twitter:description" content="Css Hack调整兼容性方式一 条件注释法（较为常用）123&amp;lt;!--[if lte IE 8]&amp;gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;lteIE8.css&quot;/&amp;gt;&amp;lt;![endif]--&amp;gt;
-
-只在IE下生效
-
-1&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;
-
-只在IE6下生效
-
-1&amp;lt;!--[if IE 6]&amp;">
+<meta name="twitter:title" content="仿jquery核心代码">
+<meta name="twitter:description" content="写在前面1jQuery也用了一段时间了，对原生js的认识也更深入了一些，所以也试着阅读了一下jquery的部分源码，真的只有佩服啊，仿照jquery源码自己也试着封装了一个超轻量级的iquery(山寨货）还很不全面，不过对于对js的使用和理解感觉更具体了一些。">
   
     <link rel="alternative" href="/atom.xml" title="KDreaming&#39;s BLOG" type="application/atom+xml">
   
@@ -171,20 +147,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Css Hack调整兼容性" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-仿jquery核心代码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Css Hack调整兼容性
+      仿jquery核心代码
     </h1>
   
 
         
-        <a href="/2015/09/02/Css Hack调整兼容性/" class="archive-article-date">
-  	<time datetime="2015-09-02T14:04:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-02</time>
+        <a href="/2016/02/05/仿jquery核心代码/" class="archive-article-date">
+  	<time datetime="2016-02-05T11:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-05</time>
 </a>
         
       </header>
@@ -192,30 +168,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="Css-Hack调整兼容性"><a href="#Css-Hack调整兼容性" class="headerlink" title="Css Hack调整兼容性"></a>Css Hack调整兼容性</h2><h3 id="方式一-条件注释法（较为常用）"><a href="#方式一-条件注释法（较为常用）" class="headerlink" title="方式一 条件注释法（较为常用）"></a>方式一 条件注释法（较为常用）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> lte IE <span class="number">8</span>]&gt;</div><div class="line">&lt;link rel="stylesheet" href="lteIE8.css"/&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>只在IE下生效</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> IE]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>只在IE6下生效</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> IE <span class="number">6</span>]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jQuery也用了一段时间了，对原生js的认识也更深入了一些，所以也试着阅读了一下jquery的部分源码，真的只有佩服啊，仿照jquery源码自己也试着封装了一个超轻量级的iquery(山寨货）还很不全面，不过对于对js的使用和理解感觉更具体了一些。</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<ul>
-<li>只在IE6以上版本生效</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> gte IE <span class="number">6</span>]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>只在IE8上不生效</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> ! IE <span class="number">8</span>]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>非IE浏览器生效</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> !IE]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<h3 id="方式二-属性前缀法"><a href="#方式二-属性前缀法" class="headerlink" title="方式二 属性前缀法"></a>方式二 属性前缀法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 加在属性上 表示该属性只针对IE567生效（最常用的是这个 还有其他的）</div></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">	div &#123;</div><div class="line">		width: 100px;</div><div class="line">		height: 100px;</div><div class="line">		background-color: red;</div><div class="line">		*background-color: yellow;/* IE 567 */</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"> window </span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> arr = [],</div><div class="line">    push = arr.push,</div><div class="line">    slice = arr.slice,</div><div class="line">    concat = arr.concat;</div><div class="line"><span class="keyword">var</span> iQuery = <span class="function"><span class="keyword">function</span> (<span class="params"> selector </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> iQuery.fn.init( selector );</div><div class="line">&#125;</div><div class="line">iQuery.fn = iQuery.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: iQuery,</div><div class="line">    <span class="attr">type</span>: <span class="string">'iQuery'</span>,</div><div class="line">    <span class="attr">length</span>: <span class="number">0</span>,</div><div class="line">    <span class="attr">each</span>: <span class="function"><span class="keyword">function</span> (<span class="params"> callback </span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> iQuery.each( <span class="keyword">this</span>, callback );</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">map</span>: <span class="function"><span class="keyword">function</span> (<span class="params"> callback </span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> iQuery.map( <span class="keyword">this</span>, callback );</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">pushStack</span>: <span class="function"><span class="keyword">function</span> (<span class="params"> arr </span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> o = iQuery( arr );</div><div class="line">        o.prevObject = <span class="keyword">this</span>;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">end</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.prevObject || <span class="keyword">this</span>;    </div><div class="line">    &#125;,</div><div class="line">    <span class="attr">toArray</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> slice.call( <span class="keyword">this</span> );</div><div class="line">    &#125; </div><div class="line">&#125;;</div><div class="line"><span class="comment">// 将所有的方法应该挂载到 iQuery 中</span></div><div class="line">iQuery.select = <span class="function"><span class="keyword">function</span> (<span class="params"> selector </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> slice.call( <span class="built_in">document</span>.querySelectorAll( selector ) );</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 工具方法 each map</span></div><div class="line">iQuery.each = <span class="function"><span class="keyword">function</span> (<span class="params"> arr, callback </span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> i;</div><div class="line">    <span class="keyword">if</span> ( arr.length &gt;= <span class="number">0</span> ) &#123;</div><div class="line">        <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; arr.length; i++ ) &#123;</div><div class="line">            <span class="keyword">if</span> ( callback.call( arr[ i ], i, arr[ i ] ) === <span class="literal">false</span> )  <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">for</span> ( i <span class="keyword">in</span> arr ) &#123;</div><div class="line">            <span class="keyword">if</span> ( callback.call( arr[ i ], i, arr[ i ] ) === <span class="literal">false</span> )  <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">iQuery.map = <span class="function"><span class="keyword">function</span> (<span class="params"> arr, callback </span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> rest = [], tmp,</div><div class="line">        i;</div><div class="line">    <span class="keyword">if</span> ( arr.length &gt;= <span class="number">0</span> ) &#123;</div><div class="line">        <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; arr.length; i++ ) &#123;</div><div class="line">            tmp = callback( arr[ i ], i );</div><div class="line">            <span class="keyword">if</span> ( tmp != <span class="literal">null</span> )  &#123;</div><div class="line">                rest.push( tmp );</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">for</span> ( i <span class="keyword">in</span> arr ) &#123;</div><div class="line">            tmp = callback( arr[ i ], i );</div><div class="line">            <span class="keyword">if</span> ( tmp != <span class="literal">null</span> )  &#123;</div><div class="line">                rest.push( tmp );</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> concat.apply( [], rest );</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 扩展能力</span></div><div class="line">iQuery.extend = iQuery.fn.extend = <span class="function"><span class="keyword">function</span> (<span class="params"> options </span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> ( <span class="keyword">var</span> k <span class="keyword">in</span> options ) &#123;</div><div class="line">        <span class="keyword">this</span>[ k ] = options[ k ];</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.iQuery = <span class="built_in">window</span>.I = iQuery;</div><div class="line"></div><div class="line">&#125;)( <span class="built_in">window</span> );</div></pre></td></tr></table></figure>
       
 
       
@@ -249,11 +204,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">兼容性</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js高级</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hack</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jquery</a>
         		</li>
       		
 		</ul>
@@ -309,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/09/02/Css Hack调整兼容性/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/02/05/仿jquery核心代码/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +278,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/10/30/js继承方式/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/12/幽灵公主 - 佩罗娜/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js继承方式
+          幽灵公主 - 佩罗娜
         
       </div>
     </a>
   
   
-    <a href="/2015/08/18/关于浮动/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于浮动</div>
+    <a href="/2015/10/30/js继承方式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js继承方式</div>
       <i class="icon-circle-right"></i>
     </a>
   
