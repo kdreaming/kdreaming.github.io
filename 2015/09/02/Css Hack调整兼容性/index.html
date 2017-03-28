@@ -6,17 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>imgTest | KDreaming&#39;s BLOG</title>
+  <title>Css Hack调整兼容性 | KDreaming&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="imgTest">
-<meta property="og:url" content="http://yoursite.com/2017/02/12/imgTest/index.html">
+  <meta name="description" content="Css Hack调整兼容性方式一 条件注释法（较为常用）123&amp;lt;!--[if lte IE 8]&amp;gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;lteIE8.css&quot;/&amp;gt;&amp;lt;![endif]--&amp;gt;
+
+只在IE下生效
+
+1&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;
+
+只在IE6下生效
+
+1&amp;lt;!--[if IE 6]&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Css Hack调整兼容性">
+<meta property="og:url" content="http://yoursite.com/2015/09/02/Css Hack调整兼容性/index.html">
 <meta property="og:site_name" content="KDreaming's BLOG">
-<meta property="og:image" content="http://yoursite.com/./../pln.jpg">
-<meta property="og:updated_time" content="2017-02-12T13:36:13.000Z">
+<meta property="og:description" content="Css Hack调整兼容性方式一 条件注释法（较为常用）123&amp;lt;!--[if lte IE 8]&amp;gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;lteIE8.css&quot;/&amp;gt;&amp;lt;![endif]--&amp;gt;
+
+只在IE下生效
+
+1&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;
+
+只在IE6下生效
+
+1&amp;lt;!--[if IE 6]&amp;">
+<meta property="og:updated_time" content="2017-03-28T12:22:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="imgTest">
-<meta name="twitter:image" content="http://yoursite.com/./../pln.jpg">
+<meta name="twitter:title" content="Css Hack调整兼容性">
+<meta name="twitter:description" content="Css Hack调整兼容性方式一 条件注释法（较为常用）123&amp;lt;!--[if lte IE 8]&amp;gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;lteIE8.css&quot;/&amp;gt;&amp;lt;![endif]--&amp;gt;
+
+只在IE下生效
+
+1&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;
+
+只在IE6下生效
+
+1&amp;lt;!--[if IE 6]&amp;">
   
     <link rel="alternative" href="/atom.xml" title="KDreaming&#39;s BLOG" type="application/atom+xml">
   
@@ -146,28 +171,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-imgTest" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Css Hack调整兼容性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      imgTest
+      Css Hack调整兼容性
     </h1>
   
 
         
-        <a href="/2017/02/12/imgTest/" class="archive-article-date">
-  	<time datetime="2017-02-12T13:07:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-12</time>
+        <a href="/2015/09/02/Css Hack调整兼容性/" class="archive-article-date">
+  	<time datetime="2015-09-02T14:04:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="./../pln.jpg" alt=""></p>
-
+        <hr>
+<h2 id="Css-Hack调整兼容性"><a href="#Css-Hack调整兼容性" class="headerlink" title="Css Hack调整兼容性"></a>Css Hack调整兼容性</h2><h3 id="方式一-条件注释法（较为常用）"><a href="#方式一-条件注释法（较为常用）" class="headerlink" title="方式一 条件注释法（较为常用）"></a>方式一 条件注释法（较为常用）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> lte IE <span class="number">8</span>]&gt;</div><div class="line">&lt;link rel="stylesheet" href="lteIE8.css"/&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>只在IE下生效</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> IE]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>只在IE6下生效</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> IE <span class="number">6</span>]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>只在IE6以上版本生效</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> gte IE <span class="number">6</span>]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>只在IE8上不生效</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> ! IE <span class="number">8</span>]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>非IE浏览器生效</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> !IE]&gt;&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>###方式二 属性前缀法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 加在属性上 表示该属性只针对IE567生效（最常用的是这个 还有其他的）</div></pre></td></tr></table></figure></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">	div &#123;</div><div class="line">		width: 100px;</div><div class="line">		height: 100px;</div><div class="line">		background-color: red;</div><div class="line">		*background-color: yellow;/* IE 567 */</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
       
 
       
@@ -196,6 +243,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">兼容性</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -246,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/12/imgTest/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/09/02/Css Hack调整兼容性/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -260,9 +322,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2017/02/12/imgTest/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          imgTest
+        
+      </div>
+    </a>
   
-    <a href="/2015/09/02/Css Hack调整兼容性/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Css Hack调整兼容性</div>
+  
+    <a href="/2015/08/18/关于浮动/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于浮动</div>
       <i class="icon-circle-right"></i>
     </a>
   
